@@ -9,8 +9,7 @@ public class ContainerCounter : BaseCounter {
     public override void Interact(Player player) {
         if (!player.HasCurrentKitchenObject()) {
             // Player's not carrying anything
-            var kitchenObject = Instantiate(kitchenObjectSO.prefab);
-            kitchenObject.GetComponent<KitchenObject>().SetKitchenObjectParent(player);
+            KitchenObject.SpawnKitchenObject(kitchenObjectSO, player);
             OnPlayerGrabbedOject?.Invoke(this, EventArgs.Empty);
         }
     }
