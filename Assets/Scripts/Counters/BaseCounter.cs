@@ -7,10 +7,10 @@ public class BaseCounter : MonoBehaviour, IKitchenObjectParent {
 
     // make it virtual so child classes could have theirs own implementation
     public virtual void Interact(Player player) {
-        Debug.LogError("BaseCounter.Interact(); should not be called");
+        Debug.Log("BaseCounter.Interact(); should not be called");
     }
     public virtual void InteractAlternate(Player player) {
-        Debug.LogError("BaseCounter.InteractAlternate(); should not be called");
+        Debug.Log("BaseCounter.InteractAlternate(); should not be called");
     }
     public GameObject GetParentHoldPoint() {
         return counterTopPoint;
