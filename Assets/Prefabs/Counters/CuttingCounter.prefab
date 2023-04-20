@@ -110,6 +110,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4058020521006540175}
     m_Modifications:
+    - target: {fileID: 1148901546060513405, guid: 2133b3f9032839344ae9a3a4537454ea,
+        type: 3}
+      propertyPath: m_FillOrigin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247324838632985086, guid: 2133b3f9032839344ae9a3a4537454ea,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1266478597917666242, guid: 2133b3f9032839344ae9a3a4537454ea,
         type: 3}
       propertyPath: cuttingCounter
@@ -432,7 +442,7 @@ PrefabInstance:
     - target: {fileID: 8085887301549250174, guid: 018df3ad9b40f4042a498d28ea985e30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8085887301549250174, guid: 018df3ad9b40f4042a498d28ea985e30,
         type: 3}
