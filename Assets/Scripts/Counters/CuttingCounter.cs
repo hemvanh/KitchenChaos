@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class CuttingCounter : BaseCounter, IHasProgress {
 
+    // Make it static so the Event is applied to ANY object
+    // Any CuttingCounter would trigger the SAME Chop event
+    // Only 1 Event handler for the any object of this class
+    public static event EventHandler OnAnyChopping;
+
     public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
     public event EventHandler OnChopping;
 
@@ -52,6 +57,7 @@ public class CuttingCounter : BaseCounter, IHasProgress {
                 progressNormalized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressRequired,
             });
             OnChopping?.Invoke(this, EventArgs.Empty);
+            OnAnyChopping?.Invoke(this, EventArgs.Empty);
 
             if (cuttingRecipeSO.cuttingProgressRequired <= cuttingProgress) {
                 var outputKitchenObjectSO = GetOutputForInput(GetCurrentKitchenObject().GetKitchenObjectSO());
