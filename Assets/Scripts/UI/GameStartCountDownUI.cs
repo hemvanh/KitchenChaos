@@ -18,7 +18,7 @@ public class GameStartCountDownUI : MonoBehaviour {
     }
 
     private void Update() {
-        countDownText.text = GameManager.Instance.GetCountDownToStartTimer().ToString();
+        countDownText.text = Mathf.Ceil(GameManager.Instance.GetCountDownToStartTimer()).ToString();
     }
 
     private void Hide() {
